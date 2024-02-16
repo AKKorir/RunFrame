@@ -1,0 +1,41 @@
+@import play.mvc.Http.Request
+@(contact: List[(String, String)],contactForm:
+Form[models.contact])(implicit request:Request, message:play.i18n.Message)
+@import helper._
+
+    @main("Add contact",
+    request.session().get("name").get(),
+    request.session().get("number").get()){
+    <div class="settings">
+        <div class="container">
+            <h2>Contact us</h2>
+            <div class="detail-header">
+                <a class="btn-navy oval">Previous Page</a>
+            </div>
+            <div class="row">
+                <div class="col-md-8" id=""
+            </div>
+        </div>
+    </div>
+
+    }
+
+@main("Hotel Kocela"){
+
+    <div style = "margin-left:0; align-items: center" class = "container" >
+        <div class = "panel panel-default">
+            <div class = "panel-body" style="text-align: center; align-items: center ">
+                <strong><h3>CONTACT US</h3></strong>
+                <br />
+                <br />
+                <center><img src="@routes.Assets.versioned("images/images/hotel.jpg")" width = "300" height = "300" /></center>
+                <br />
+                <br />
+                <div style="text-align: center;">
+                    <p>Contact No: +254796170388</p>
+                    <p>Email: rooms@@hotel.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
